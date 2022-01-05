@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: iot-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/athari_flowbox_iot
+    password: password
+    username: samtoya
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+server:
+  port: 34200
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
